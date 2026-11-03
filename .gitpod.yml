@@ -1,0 +1,16 @@
+
+# Image of workspace
+image: gitpod/workspace-full:latest
+
+# Startup tasks
+tasks:
+  - name: Script Task
+    init: echo 'init script'
+    command: echo 'start script'
+
+# Ports to expose
+ports:
+  - name: Frontend
+    description: Port 3000 for the frontend
+    port: 3000
+    onOpen: open-preview
